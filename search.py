@@ -4,16 +4,13 @@ def binary_search(array, search_for):
     found = False
     location = ''
     while slice_start <= slice_end and not found:
-        print("Slice end", slice_end)
         location = (slice_start + slice_end)
         if array[location] == search_for:
             found = True
         else:
             if search_for < array[location]:
-                print("slice end", slice_end)
                 slice_end = location - 1
             else:
-                print("slice start", slice_start)
                 slice_start = location + 1
     return location
 
